@@ -103,6 +103,22 @@ footer {
     color: var(--Very-Dark-Grayish-Blue);
 }
 
+.animate {
+    animation-name: rotation;
+    animation-duration: 2s;
+
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(90deg);
+    }
+}
+
 @media only screen and (min-width:700px) {
 
     .card {
@@ -124,19 +140,4 @@ footer {
         color: var(--Button-hover);
     }
 
-    .animate {
-        animation-name: rotation;
-        animation-duration: 2s;
-
-    }
-
-    @keyframes rotation {
-        from {
-            transform: rotate(0deg);
-        }
-
-        to {
-            transform: rotate(90deg);
-        }
-    }
 }
