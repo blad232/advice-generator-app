@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+
+    /*## Colors*/
+
+    /*### Primary*/
+
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+
+    /*### Neutral*/
+
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+    --White: hsl(0, 0%, 100%);
+    --Button-hover: hsl(281, 86%, 55%);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Manrope", sans-serif;
+    border: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--Dark-Blue);
+    height: 100vh;
+}
+
+.container {
+    position: absolute;
+}
+
+.card {
+    font-size: 1.2rem;
+    width: 345px;
+    max-height: 365px;
+    background: var(--Dark-Grayish-Blue);
+    border-radius: 1rem;
+    text-align: center;
+    color: var(--Light-Cyan);
+    padding: 4rem 2.5rem 0;
+}
+
+.text-id {
+    color: var(--Neon-Green);
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.3rem;
+}
+
+.block-2 {
+    margin-top: 3rem;
+    min-height: 165px;
+}
+
+.block-3 {
+    height: 3rem;
+    width: 100%;
+    background: url("../images/pattern-divider-mobile.svg") no-repeat center;
+}
+
+#boton {
+    top: 3rem;
+    position: relative;
+    height: 6.5rem;
+    width: 6.5rem;
+    border-radius: 50%;
+    background: url("../images/icon-dice.svg") no-repeat center, var(--Neon-Green);
+
+}
+
+footer {
+    margin-top: auto;
+}
+
+
+.attribution {
+    font-size: 1.5rem;
+    color: var(--White);
+}
+
+.attribution>a {
+    color: var(--Very-Dark-Grayish-Blue);
+    font-family: "Times New Roman";
+    font-weight: 500;
+}
+
+.attribution>a:visited {
+    color: var(--Very-Dark-Grayish-Blue);
+}
+
+@media only screen and (min-width:700px) {
+
+    .card {
+        width: 540px;
+        min-height: 330px;
+        padding: 4rem 7rem 0;
+    }
+
+    .block-3 {
+        background: url("../images/pattern-divider-desktop.svg") no-repeat center;
+    }
+
+    #boton:hover {
+        cursor: pointer;
+        box-shadow: 0 0 25px var(--Neon-Green);
+    }
+
+    .attribution>a:hover {
+        color: var(--Button-hover);
+    }
+
+    .animate {
+        animation-name: rotation;
+        animation-duration: 2s;
+
+    }
+
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(90deg);
+        }
+    }
+}
